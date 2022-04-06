@@ -8,12 +8,12 @@ def BFS(a, b, target):
     q = deque()
  
     q.append((0, 0))
-    # print(q)
+    
  
     while len(q) > 0:
  
         u = q.popleft()
-        # print(u)
+       
  
         if (u[0], u[1]) in m:
             continue
@@ -22,10 +22,10 @@ def BFS(a, b, target):
             continue
  
         path.append([u[0], u[1]])
-        # print(path)
+        
  
         m[(u[0], u[1])] = 1
-        # print(m)
+        
  
         if u[0] == target or u[1] == target:
             isSolvable = True
@@ -53,18 +53,18 @@ def BFS(a, b, target):
  
             c = u[0] + ap
             d = u[1] - ap
-            # print(c,d)
+            
  
             if c == a or (d == 0 and d >= 0):
                 q.append([c, d])
-                # print(c,d)
+                
  
             c = u[0] - ap
             d = u[1] + ap
  
             if (c == 0 and c >= 0) or d == b:
                 q.append([c, d])
-                print(c,d)
+                
  
         q.append([a, 0])
  
